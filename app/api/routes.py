@@ -58,7 +58,7 @@ def update_car(current_user_token,id):
 # DELETE car ENDPOINT
 @api.route('/cars/<id>', methods = ['DELETE'])
 @token_required
-def delete_contact(current_user_token, id):
+def delete_car(current_user_token, id):
     car = Car.query.get(id)
     db.session.delete(car)
     db.session.commit()
